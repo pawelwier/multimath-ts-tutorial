@@ -1,3 +1,5 @@
+/// <reference path="player.ts" />
+
 function startGame() {
 
     let playerName: string | undefined = getInputValue('playername');
@@ -45,3 +47,7 @@ const logMessage = (message: string) => console.log(message);
 function logError(err: string): void {
     console.error(err);
 }
+
+const firstPlayer: Player = new Player();
+firstPlayer.name = 'Lainer';
+console.log(firstPlayer.formatName())
